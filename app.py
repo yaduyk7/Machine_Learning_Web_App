@@ -10,7 +10,7 @@ def loaded_model():
 new_model=loaded_model()
 st.set_page_config(page_title="Animal Classifier App", page_icon="🐾")
 st.title("Animal Classifier App 🦁")
-file = st.file_uploader("Please upload images of any the following animals: Elephant, Lion, Monkey, Zebra",type=["jpg", "png"])
+file = st.file_uploader("Please upload images of any of the following animals: Elephant, Lion, Monkey, Zebra",type=["jpg", "png"])
 def import_and_predict(image_data, new_model):
   size = (160,160)
   image = ImageOps.fit(image_data, size, method=0, bleed=0.0, centering=(0.5, 0.5))
